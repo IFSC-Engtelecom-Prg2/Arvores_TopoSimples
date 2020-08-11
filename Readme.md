@@ -2,11 +2,13 @@
 
 Escreva uma função que crie uma árvore de pesquisa binária com exatamente esta topologia:
 
+```
            mar
           /   \
     ferias     praia
     /     \    /    \
  areia    luz onda  sol
+```
 
 A função deve ser declarada assim:
 
