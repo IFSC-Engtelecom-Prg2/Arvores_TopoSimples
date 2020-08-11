@@ -1,16 +1,21 @@
-# Faz intersecção de duas listas
+# Criação de árvore com topologia simples
 
-Uma necessidade recorrente é identificar valores que aparecem em dois conjuntos. Por exemplo, sabendo que usuários que acessam um sistema são registrados em um arquivo, poed-se querer saber que usuários acessaram o sistema em duas datas específicas. A generalização de uma solução pode ser feita por meio da intersecção de duas listas: o resultado seria uma nova lista contendo todos os valores que aparecem em ambas as listas. 
+Escreva uma função que crie uma árvore de pesquisa binária com exatamente esta topologia:
 
-A função _interseccao_ implementa exatamente  isso:
+           mar
+          /   \
+    ferias     praia
+    /     \    /    \
+ areia    luz onda  sol
+
+A função deve ser declarada assim:
 
 ```c++
-template <type T> list<T> interseccao(const list<T> & l1, const list<T> & l2) {
-  // aqui fica o corpo da função !
-}
+arvore<string> * cria_arvore();
 ```
 
-Note que essa função está definida como uma [função template](https://wiki.sj.ifsc.edu.br/index.php/Introdu%C3%A7%C3%A3o_C%2B%2B#Fun.C3.A7.C3.B5es_template).
-Com isso, pode-se fazer a intersecção entre duas listas que armazenam qualquer tipo de dados.
+O seguinte teste será realizado:
 
-Implemente a função _interseccao_ no arquivo _questao.h_. 
+**OK**: verifica se a árvore tem a topologia especificada.
+
+Declare a função _criaArvore_ no arquivo _questao.h_, e imnplemente-a em _questao.cpp_
