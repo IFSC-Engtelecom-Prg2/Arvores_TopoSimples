@@ -13,7 +13,7 @@ Escreva uma função que crie uma árvore de pesquisa binária com exatamente es
 A função deve ser declarada assim:
 
 ```c++
-arvore<string> * cria_arvore();
+arvore<string> cria_arvore();
 ```
 
 O seguinte teste será realizado:
