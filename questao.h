@@ -8,5 +8,4 @@
 // declare aqui sua função
 // não esqueça dos include !
 
-
 #endif //PROG_QUESTAO_H

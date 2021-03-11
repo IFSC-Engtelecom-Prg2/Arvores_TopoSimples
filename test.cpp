@@ -11,10 +11,12 @@
 #include <fstream>
 #include <list>
 #include <random>
+#include <prglib.h>
 #include "questao.h"
 #include "gtest/gtest.h"
 
 using namespace std;
+using prglib::arvore;
 
 class TesteQuestao: public ::testing::Test {
 protected:
@@ -54,19 +56,19 @@ ostream  & operator<<(ostream & out, list<string> & l) {
 TEST_F(TesteQuestao, OK)
 {
         list<string> l, l2;
-        arvore<string> * arv;
+        arvore<string> arv;
 
         try {
             arv  = cria_arvore();
-            if (arv == nullptr) {
-                FAIL() << "== resultado de criaArvore foi nullptr !!!" << endl;
+            if (arv.vazia()) {
+                FAIL() << "== resultado de criaArvore foi árvore vazia !!!" << endl;
             }
         } catch (...) {
             FAIL() << "cria_arvore disparou uma excecao ... ";
             return;
         }
 
-        arv->listePreOrder(l);
+        arv.listePreOrder(l);
         l2.push_back("mar");
         l2.push_back("ferias");
         l2.push_back("areia");
